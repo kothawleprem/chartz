@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Output</title>
+</head>
+
+<body>
+    {% if format == "png" %}
+    <img src="{{my_url}}">
+    {% else %}
+    <embed src="{{my_url}}" type="application/pdf" width="100%" height="750px" />
+    {% endif %}
+</body>
+
+</html>
