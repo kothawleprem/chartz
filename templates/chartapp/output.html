@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} Output {% endblock title %}
+{% block body %}
+    {% if text|length > 1 %}
+    <a href="https://quickchart.io/qr?text={{text}}" download>
+        <img src="https://quickchart.io/qr?text={{text}}">
+    </a>
+
+    {% elif format == "png" %}
+    <p>Click on the image to Download<p>
+    <a href="{{my_url}}" download>
+        <img src="{{my_url}}">
+    </a>
+    
+    {% else %}
+    <embed src="{{my_url}}" type="application/pdf" width="100%" height="750px" />
+    {% endif %}
+
+    
+{% endblock body %}
