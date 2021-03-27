@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block title %} Home {% endblock title %}
+{% block homeactive %}active{% endblock homeactive %}
 {% load crispy_forms_tags %}
+
 
 {% block body %}
 {% load static %}
@@ -10,12 +12,27 @@
     <section class="about-area">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6 col-md-12 about-title">
-                    <h1 class="display-4">Welcome to Chart Generator</h1>
-                    <p class="lead text-muted mb-0">Create Free Charts Easily, also delivered via E-mail</p>
-                    <button type="button" class="btn btn-warning">Get Started</button>
+                <div class="col-lg-6 col-md-12 about-title" style="padding-top: 80px;">
+                    <h1 class="display-4" style="font-family: 'Poppins', sans-serif;">ChartBay</h1>
+                    <h2 class="lead text-muted mb-0"> Create, Share & Analyse on the Go </h2>
+                    <br>
+                    <ul>
+                        <li>
+                            Enter your data to get instant results.
+                        </li>
+                        <li>
+                            12 Different Types of Charts + QR Code in PNG of PDF Format.
+                        </li>
+                        <li>
+                            Creates and delivers via E-mail within minutes for easy analysis.
+                        </li>
+                        <li>
+                            Upload CSV files for large data.
+                        </li>
+                    </ul>
+                    <a type="button" href="#generate" class="btn btn-warning">Get Started</a>
                 </div>
-                <div class="col-lg-6 col-md-12">
+                <div class="col-lg-6 col-md-12" style="padding-top: 40px;">
                     <div class="img-fluid">
                         <img src="https://github.com/kothawleprem/chartz/blob/main/media/main2.png?raw=true" alt="About us" class="img-fluid">
                     </div>
@@ -30,7 +47,7 @@
     
                 <form class="well form-horizontal" action="" method="post">
                     <h1>
-                        <p style="text-align:center;">Generate now!</p>
+                        <p id="generate" style="text-align:center; font-family: 'lora', sans-serif;">Let's Start!</p>
                     </h1>
     
                     <fieldset>
@@ -50,13 +67,13 @@
 <section class="about-area">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6 col-md-12">
+            <div class="col-lg-6 col-md-12" style="padding-top: 20px;">
                 <div class="img-fluid">
                     <img src="https://github.com/kothawleprem/chartz/blob/main/media/main1.png?raw=true" alt="About us" class="img-fluid">
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12 about-title">
-                <h2 class="text-uppercase pt-5">
+            <div class="col-lg-6 col-md-12 about-title" style="padding-top: 60px;">
+                <h2 class="text-uppercase pt-5" style="font-family: 'lora', serif;">
                     <span>Have</span>
                     <span>A</span>
                     <span>CSV File?</span>
@@ -76,19 +93,19 @@
 <section class="about-area">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6 col-md-12 about-title">
-                <h2 class="text-uppercase pt-5">
+            <div class="col-lg-6 col-md-12 about-title" style="padding-top: 50px;">
+                <h2 class="text-uppercase pt-5" style="font-family: 'lora', sans-serif;" >
                     <span>Do You</span>
                     <span>Know</span>
                     <span>These Charts?</span>
                 </h2>
-                <div class="paragraph py w-75">
-                    <p class="para">
-                        We have Covered it Too.
+                <div class="paragraph py w-75" >
+                    <p class="para" style="font-family: 'lora', sans-serif;">
+                        Bar | Line | Pie | Radar | Doughnut | Polar Area | Scatter | Bubble | Radial Gauge | Violin | Sparkline | Progress Bar 
                     </p>
 
                 </div>
-                <button type="button" class="btn btn-warning">Charts Info!</button>
+                <a type="button" href="/charts" class="btn btn-warning">Charts Info!</a>
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="img-fluid">
@@ -107,24 +124,25 @@
                     <img src="https://github.com/kothawleprem/chartz/blob/main/media/main4.png?raw=true" alt="About us" class="img-fluid">
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12 about-title">
-                <h2 class="text-uppercase pt-5">
-                    <span>Quickchart</span>
-                    <span>API</span>
-                    <span>Are Used!!!</span>
+            <div class="col-lg-6 col-md-12 about-title" style="padding-top: 40px;">
+                <h2 class="text-uppercase pt-5" style="font-family: 'lora', sans-serif;">
+                    <span>Our</span>
+                    <span>Technology</span>
                 </h2>
                 <div class="paragraph py w-75">
-                    <p class="para">
-                        Open Source API's are used to bring you these perfect charts
+                    <p class="para" style="font-family: 'lora', sans-serif;">
+                        We use Open Source API's for the smooth process you want!
                     </p>
 
                 </div>
-                <button type="button" class="btn btn-warning">About Us</button>
+                <a type="button" href="/about/" class="btn btn-warning">About Us</a>
             </div>
         </div>
     </div>
 </section>
 <!--End About Area -->
+</div>
+</div>
 </div>
 
 {% endblock body %}

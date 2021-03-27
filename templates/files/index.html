@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block title %} Home {% endblock title %}
+{% block homeactive %}active{% endblock homeactive %}
 {% load crispy_forms_tags %}
 
 {% block body %}
@@ -9,32 +10,32 @@
 </br>
 </br>
 </br>
-</br>
+
 
     <section class="about-area">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6 col-md-12 about-title">
-                    <h1 class="display-4">Welcome to Chart Generator</h1>
+                <div class="col-lg-6 col-md-12 about-title" style="padding-top: 70px;">
+                    <h1 class="display-4" style="font-family: 'lora', sans-serif;">ChartBay : Upload your CSV File</h1>
                     <form action="{% url "upload_csv" %}" method="POST" enctype="multipart/form-data" class="form-horizontal">
                         {% csrf_token %}
                         {{ form }}
                         <div class="form-group">
-                            <label f or="name">File: </label>
+                            <label f or="name"></label>
                             <div>
                                 <input type="file" name="csv_file" id="csv_file" required="True" class=" btn-warning form-control">
                             </div>
                         </div>
                         <div class="form-group">
                             <div>
-                                <button  class="btn btn-warning">Upload CSV</button>
+                                <button  class="btn btn-primary">Upload CSV</button>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="img-fluid">
-                        <img src="media/main2.png" alt="About us" class="img-fluid">
+                        <img src="media/main7.png" alt="About us" class="img-fluid">
                     </div>
                 </div>
             </div>

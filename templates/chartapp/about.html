@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block title %} About Us! {% endblock title %}
+{% block aboutactive %}active{% endblock aboutactive %}
 {% block body %}
 {% load static %}
 
@@ -9,7 +10,6 @@
     }
 </style>
 
-
 <div class="container">
     
     
@@ -18,7 +18,11 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-md-12 about-title">
-                    <h1 style="padding: 160px;">About Us!!</h1>
+                    <h1 style="padding-top: 140px;font-family: 'lora', sans-serif;">About Us!!</h1>
+                    <br>
+                    <p>• ChartBay offers a range of charts that can be created, shared and analysed on the go.</p>
+                    <p>• Data visualization made easy – no complicated software to learn</p>
+                    <p>• Publish, share or download your high-resolution charts</p>
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="img-fluid">
@@ -43,11 +47,11 @@
                             class="img-fluid">
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 about-title">
-                    <strong>
-                        QuickChart is an API for generating chart images, PDFs, and QR codes. We're built on Chart.js, the most popular
-                        open-source charting
-                    </strong>
+                <div class="col-lg-6 col-md-12 about">
+                    <p class="para" style="font-family: 'lora', sans-serif;">
+                        QuickChart API is used for generating chart images, PDFs, and QR codes.It's built on Chart.js, the most popular
+                        open-source charting.
+                    </p>
                     
                     <a type="button" href="/files" class="btn btn-warning">QuickChart</a>
                 </div>
@@ -63,7 +67,7 @@
                 style="background: white;border-radius: 10px;box-shadow: 10px 10px 5px grey;">
                 <div class="row">
                     <div class="col-lg-12 text-center service-title">
-                        <h1 class="text-uppercase title-text">Technology</h1>
+                        <h1 class="text-uppercase title-text" style="font-family: 'lora', sans-serif;">Technology</h1>
         
                     </div>
                 </div>
@@ -94,7 +98,7 @@
                                         srcset="https://github.com/kothawleprem/chartz/blob/main/media/htmlcss.png?raw=true"
                                         alt="Service-1">
                                 </div>
-                                <h5 class="card-body text-uppercase text-center font-roboto">HTML & CSS</h5>
+                                <h5 class="card-body text-uppercase text-center font-roboto" style="padding-top: 50px;">HTML & CSS</h5>
 
                             </div>
                         </div>
@@ -120,7 +124,7 @@
         <div class="container py-5">
             <div class="row mb-4">
         <div class="col-lg-12 text-center service-title">
-            <h1 class="text-uppercase title-text">Our Team</h1>
+            <h1 class="text-uppercase title-text" style="font-family: 'lora', sans-serif;">Our Team</h1>
         </div>
 
                 </div>
@@ -134,7 +138,7 @@
                             src="https://pbs.twimg.com/profile_images/1368812915965390851/n83dF28V_400x400.jpg" alt=""
                             width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                         <h5 class="mb-0">Prem Kothawle</h5>
-                        <button type="button" class="btn btn-primary"><i class="fab fa-github left"></i> Github</button>
+                        <a type="button" target="_blank" href="https://github.com/kothawleprem" class="btn btn-primary"><i class="fab fa-github left"></i> Github</a>
 
 
                     </div>
@@ -147,7 +151,7 @@
                             src="https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/853a71bb0f859484926231c1afddaf06-1591471754498/ae708205-f8ce-4667-9159-8e9e97090085.jpeg" alt=""
                             width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                         <h5 class="mb-0">Shubham Saroj</h5>
-                        <button type="button" class="btn btn-primary"><i class="fab fa-github left"></i> Github</button>
+                        <a type="button" target="_blank" href="https://github.com/shubhamsaroj23" class="btn btn-primary"><i class="fab fa-github left"></i> Github</a>
                     </div>
                 </div>
                 <!-- End-->

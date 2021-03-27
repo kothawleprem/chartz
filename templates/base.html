@@ -11,6 +11,13 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css'>
     {% load static %}
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 
 
 
@@ -20,7 +27,7 @@
 
 
     <nav class="navbar navbar-expand-custom navbar-mainbg">
-        <a class="navbar-brand navbar-logo" href="#">Chart Generator</a>
+        <a class="navbar-brand navbar-logo" href="{% url 'home' %}" style="font-family:  'Permanent Marker', cursive;;">ChartBay</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars text-white"></i>
@@ -31,13 +38,13 @@
                     <div class="left"></div>
                     <div class="right"></div>
                 </div>
-                <li class="nav-item active">
+                <li class="nav-item {% block homeactive %}{% endblock homeactive %}">
                     <a class="nav-link" href="{% url 'home' %}"><i class="fas fa-home"></i></i>Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {% block chartsactive %}{% endblock chartsactive %}">
                     <a class="nav-link" href="{% url 'charts' %}"><i class="far fa-chart-bar"></i>Charts</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {% block aboutactive %}{% endblock aboutactive %}">
                     <a class="nav-link" href="{% url 'about' %}"><i class="far fa-comment"></i></i>About Us!</a>
                 </li>
             </ul>
