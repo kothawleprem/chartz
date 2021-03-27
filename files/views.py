@@ -116,13 +116,14 @@ def upload_csv(request):
     print(my_url)
 
     context = {'my_url' : my_url, 'format' : 'png',}
-    subject, from_email, to = 'Your Chart Is Delivered!!!', settings.EMAIL_HOST_USER,toemail
-    text_content = 'Chart Sent Successfully'
-    # if formats == "png":
-    html_content = f"<h1> Your Chart is Ready </h2> <img src='{my_url}'/><p> Team Ternalt's</p>"
-    # else:
-    msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
-    msg.attach_alternative(html_content, "text/html")
-    msg.send()                                                                   
+    if len(toemail)>1:
+        subject, from_email, to = 'Your Chart Is Delivered!!!', settings.EMAIL_HOST_USER,toemail
+        text_content = 'Chart Sent Successfully'
+        # if formats == "png":
+        html_content = f"<h1> Your Chart is Ready </h2> <img src='{my_url}'/><p> Team Ternalt's</p>"
+        # else:
+        msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+        msg.attach_alternative(html_content, "text/html")
+        msg.send()                                                                   
     return render(request, "files/upload_csv.html", context)
 
