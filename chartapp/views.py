@@ -27,14 +27,15 @@ def index(request):
         name = ""
         form = NameForm(request.POST)
         if form.is_valid():
-            text = (request.POST)['qrcode']
-            if len(text)>1:
-                context = {'text' : text}
-                return render(request, 'chartapp/output.html',context)
+            try:
+                text = (request.POST)['qrcode']
+                if len(text)>1:
+                    context = {'text' : text}
+                    return render(request, 'chartapp/output.html',context)
+            except:
+                print("")
             else:
                 # try:
-
-                print(request.POST)
                 labels_raw = (request.POST)['labels']
                 labels = list(map(str,labels_raw.split(",")))
                 data_raw = (request.POST)['data']
@@ -43,8 +44,6 @@ def index(request):
                 types = (request.POST)['types']
                 toemail = request.POST.get('toemail')
                 name = request.POST.get('name')
-                print(labels)                   
-                print(data)
                 config = {
                     "type": types,
                     "data": {

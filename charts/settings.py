@@ -25,6 +25,7 @@ SECRET_KEY = 'ne@48ujd9eqemm*^(p5fmz^v6nckd2_u$fn(re^p!k!iszjob='
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+DEBUG = TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'chartapp',
+    'files',
 ]
 
 MIDDLEWARE = [
@@ -119,7 +121,7 @@ USE_TZ = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "email@mail.com"
+EMAIL_HOST_USER = "email@gmail.com"
 EMAIL_HOST_PASSWORD = "password"
 
 
@@ -133,3 +135,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,"media")
+

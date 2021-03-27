@@ -1,18 +1,32 @@
 {% extends 'base.html' %}
 {% block title %} Output {% endblock title %}
 {% block body %}
+
+<style>
+    .img{
+        width: 200px;
+        height: 200px;
+    }
+</style>
     {% if text|length > 1 %}
-    <a href="https://quickchart.io/qr?text={{text}}" download>
+    <center>
+        <h2>Here's Your QR Code!!!</h2>
+    
+
         <img src="https://quickchart.io/qr?text={{text}}">
-    </a>
+    </center>
 
     {% elif format == "png" %}
-    <p>Click on the image to Download<p>
-    <a href="{{my_url}}" download>
-        <img src="{{my_url}}">
-    </a>
+        <center>
+    <h2>Here's Your Chart!!!</h2>
+        <a href="{{my_url}}" download>
+            <img src="{{my_url}}">
+        </a>
+    </center>
+    
     
     {% else %}
+    <center><h2>Here's Your Chart!!!</h2></center>
     <embed src="{{my_url}}" type="application/pdf" width="100%" height="750px" />
     {% endif %}
 

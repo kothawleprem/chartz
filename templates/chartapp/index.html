@@ -3,10 +3,110 @@
 {% load crispy_forms_tags %}
 
 {% block body %}
+
+<div class="container">
+    <section class="about-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 about-title">
+                    <h1 class="display-4">Welcome to Chart Generator</h1>
+                    <p class="lead text-muted mb-0">Create Free Charts Easily, also delivered via E-mail</p>
+                    <button type="button" class="btn btn-warning">Get Started</button>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="img-fluid">
+                        <img src="media/main2.png" alt="About us" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <form action="" method="post">
         {% csrf_token %}
         {{ form }}
         <input type="submit" value="Submit">
     </form>
+
+
+<section class="about-area">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="img-fluid">
+                    <img src="media/main1.png" alt="About us" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 about-title">
+                <h2 class="text-uppercase pt-5">
+                    <span>Have</span>
+                    <span>A</span>
+                    <span>CSV File?</span>
+                </h2>
+                <div class="paragraph py w-75">
+                    <p class="para">
+                        We have Covered it Too.
+                    </p>
+
+                </div>
+                <a type="button" href="/files" class="btn btn-warning">CSV File</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-area">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 about-title">
+                <h2 class="text-uppercase pt-5">
+                    <span>Do You</span>
+                    <span>Know</span>
+                    <span>These Charts?</span>
+                </h2>
+                <div class="paragraph py w-75">
+                    <p class="para">
+                        We have Covered it Too.
+                    </p>
+
+                </div>
+                <button type="button" class="btn btn-warning">Charts Info!</button>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="img-fluid">
+                    <img src="media/main3.png" alt="About us" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-area">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="img-fluid">
+                    <img src="media/main4.png" alt="About us" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 about-title">
+                <h2 class="text-uppercase pt-5">
+                    <span>Quickchart</span>
+                    <span>API</span>
+                    <span>Are Used!!!</span>
+                </h2>
+                <div class="paragraph py w-75">
+                    <p class="para">
+                        Open Source API's are used to bring you these perfect charts
+                    </p>
+
+                </div>
+                <button type="button" class="btn btn-warning">About Us</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End About Area -->
+</div>
 
 {% endblock body %}

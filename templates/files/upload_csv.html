@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock title %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+
+    {% if format == "png" %}
+    <center>
+        <h2>Here's Your Chart!!!</h2>
+            <img src="{{my_url}}">
+
+    </center>
+    
+    
+    {% elif format == "pdf" %}
+    <center>
+        <h2>Here's Your Chart!!!</h2>
+    </center>
+    <embed src="{{my_url}}" type="application/pdf" width="100%" height="750px" />
+
+    {% else %}
+    <center>
+        <h2>It seems you have entered wrong file format.</h2>
+    </center>
+    {% endif %}
+
+
+{% endblock body %}
