@@ -36,10 +36,10 @@ def upload_csv(request):
     #loop over the lines and save them in db. If error shows up , store as string and then display
     label_list = []
     data_list = []
-    # types = "" 
-    # formats = ""
-    # name = ""
-    # toemail = ""
+    types = "" 
+    formats = ""
+    name = ""
+    toemail = ""
     for line in lines:                                   
         fields = line.split(",")
         data_dict = {}
