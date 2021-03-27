@@ -3,6 +3,8 @@
 {% load crispy_forms_tags %}
 
 {% block body %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
 
 <div class="container">
     <section class="about-area">
@@ -15,26 +17,42 @@
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="img-fluid">
-                        <img src="media/main2.png" alt="About us" class="img-fluid">
+                        <img src="https://github.com/kothawleprem/chartz/blob/main/media/main2.png?raw=true" alt="About us" class="img-fluid">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="Submit">
-    </form>
-
+    <div id="form-main">
+        <div id="form-div">
+            <table>
+    
+                <form class="well form-horizontal" action="" method="post">
+                    <h1>
+                        <p style="text-align:center;">Generate now!</p>
+                    </h1>
+    
+                    <fieldset>
+                        {% csrf_token %}
+                        {{ form.as_p }}
+    
+    
+            </table>
+            <!--  <input type="submit" value="Submit"> -->
+            <button type="submit" class="btn btn-outline-primary d-grid gap-2 col-6 mx-auto  border-color:#9999ff"
+                value="Submit"
+                style="margin-left:auto;margin-right:auto;display:block;margin-top:9%;margin-bottom:0%">Generate
+                Chart</button>
+            </fieldset>
+            </form>
 
 <section class="about-area">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6 col-md-12">
                 <div class="img-fluid">
-                    <img src="media/main1.png" alt="About us" class="img-fluid">
+                    <img src="https://github.com/kothawleprem/chartz/blob/main/media/main1.png?raw=true" alt="About us" class="img-fluid">
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 about-title">
@@ -74,7 +92,7 @@
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="img-fluid">
-                    <img src="media/main3.png" alt="About us" class="img-fluid">
+                    <img src="https://github.com/kothawleprem/chartz/blob/main/media/main3.png?raw=true" alt="About us" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -86,7 +104,7 @@
         <div class="row">
             <div class="col-lg-6 col-md-12">
                 <div class="img-fluid">
-                    <img src="media/main4.png" alt="About us" class="img-fluid">
+                    <img src="https://github.com/kothawleprem/chartz/blob/main/media/main4.png?raw=true" alt="About us" class="img-fluid">
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 about-title">

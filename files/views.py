@@ -14,13 +14,6 @@ from django.core.mail import EmailMultiAlternatives
 
 # Create your views here.
 def filesHome(request):
-    # if request.method == 'POST':
-    #     types = ""
-    #     formats = ""
-    #     text = ""
-    #     toemail = "" 
-    #     name = ""
-    #     form = FileForm(request.POST)
     return render(request,'files/index.html')
 
 
