@@ -69,12 +69,12 @@ def index(request):
 
                 context = {'my_url' : my_url, 'format' : formats, 'text' : text}
 
-                subject, from_email, to = 'Your Chart Is Delivered!!!', settings.EMAIL_HOST_USER,toemail
+                subject, from_email, to = 'Your Chart From ChartBay has Arrived!!!', settings.EMAIL_HOST_USER,toemail
                 text_content = 'Chart Sent Successfully'
                 if formats == "png":
-                    html_content = f"<h1> Your Chart is Ready </h2> <img src='{my_url}'/><p> Team Ternalt's</p>"
+                    html_content = f"<h3> Your Chart is Ready!! </h3> <img src='{my_url}'/><h4>Here's the url:<a href='{my_url}'>{my_url}</a></h4><h4> Do Share with your Friends: <a href='https://chartbay.herokuapp.com/'><em>ChartBay</em></a></h4><h4><i>~Team Ternalt's</i></h4>"
                 else:
-                    html_content = f"<h1> PDF Available !</h1><a href='{my_url}''>Click Here</a> <p> Team Ternalt's</p>"
+                    html_content = f"<h1> PDF Available !</h1><a href='{my_url}'>Click Here</a><h4>Here's the url:<a href='{my_url}'>{my_url}</a></h4><h4> Do Share with your Friends: <a href='https://chartbay.herokuapp.com/'><em>ChartBay</em></a></h4><h4><i>~Team Ternalt's</i></h4>"
                 msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
                 msg.attach_alternative(html_content, "text/html")
                 msg.send()
