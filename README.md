@@ -2,7 +2,7 @@
 
 ## **ChartBay is an instant Chart Provider based on inputs from CSV files or manual entry. It outputs data in PNG and PDF format which is also directly sent to the user via e-mail within few seconds.**
 
-[Visit ChartBay]([https://chartbay.herokuapp.com/](https://chartbay.herokuapp.com/))
+[Visit ChartBay](https://chartbay.herokuapp.com/)
 
 💻 Data visualization made easy – no complicated software to learn
 
