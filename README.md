@@ -5,15 +5,12 @@
 [Visit ChartBay](https://chartbay.herokuapp.com/)
 
 💻 Data visualization made easy – no complicated software to learn
-
 ⚡ Publish, share or download your high-resolution charts on the Go quickly.
-
 🖥️ User Friendly interface with no complications.
-
 ➡️ For Large Data, upload CSV Files.
-
 ➡️ Instant delivery to user's inbox.
-
 ➡️ 12 different types of Charts along with Information about each of them.
 
-
+### Proposed Features:
+1. Adding a dashboard for users with past visualizations.
+2. Improving the generated visualizations.
